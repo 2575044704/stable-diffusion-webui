@@ -260,7 +260,7 @@ def prepare_environment():
     print(f"Python {sys.version}")
     print(f"Version: {tag}")
     print(f"Commit hash: {commit}")
-
+    print("云端部署包 Created By Loading，群号 632428790")
     if args.reinstall_torch or not is_installed("torch") or not is_installed("torchvision"):
         run(f'"{python}" -m {torch_command}', "Installing torch and torchvision", "Couldn't install torch", live=True)
 
@@ -271,13 +271,13 @@ def prepare_environment():
         )
 
     if not is_installed("gfpgan"):
-        run_pip(f"install {gfpgan_package}", "gfpgan")
+        run_pip(f"安装 {gfpgan_package}", "gfpgan")
 
     if not is_installed("clip"):
-        run_pip(f"install {clip_package}", "clip")
+        run_pip(f"安装 {clip_package}", "clip")
 
     if not is_installed("open_clip"):
-        run_pip(f"install {openclip_package}", "open_clip")
+        run_pip(f"安装 {openclip_package}", "open_clip")
 
     if (not is_installed("xformers") or args.reinstall_xformers) and args.xformers:
         if platform.system() == "Windows":
