@@ -1,14 +1,29 @@
-<div>
-        <a href="{api_docs}">API</a>
+<html>
+<head>
+    <title>刷新网页</title>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+
+        function autoRefresh() {
+            setTimeout(refreshPage, 5000); // 5000 毫秒后刷新页面
+        }
+    </script>
+</head>
+<body onload="autoRefresh()">
+    <div>
+        <a href="{api_docs}">API文档</a>
          • 
-        <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Github</a>
+        <a href="https://www.kaggle.com/code/qq2575044704/stable-diffusion-webui-novelai-edited-version-2">作者项目地址</a>
          • 
-  	<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ScmeGHoWmtAnPp5RuBNqkmhlQsvOHaKH&authKey=CncKLo1nPMUkUs05FhuU1PS2lcrMfgtfzWSVh0io8VWn5sWlDidMwrZy2%2Bjfj4Nb&noverify=0&group_code=632428790" style="color: red;" target="_blank">AISTEG</a>
+  	    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ScmeGHoWmtAnPp5RuBNqkmhlQsvOHaKH&authKey=CncKLo1nPMUkUs05FhuU1PS2lcrMfgtfzWSVh0io8VWn5sWlDidMwrZy2%2Bjfj4Nb&noverify=0&group_code=632428790" style="color: red;" target="_blank">点我加群632428790，关注更新动态</a>
          • 
-        <a href="#" onclick="showProfile('./internal/profile-startup'); return false;">Startup profile</a>
+        <a href="#" onclick="refreshPage(); return false;">刷新</a>
          • 
-        <a href="/" onclick="javascript:gradioApp().getElementById('settings_restart_gradio').click(); return false">Reload UI</a>
-</div>
+        <a href="/" onclick="javascript:gradioApp().getElementById('settings_restart_gradio').click(); return false">重启UI（勿点）</a>
+    </div>
+</body>
 <br />
 <div class="versions">
 {versions}
