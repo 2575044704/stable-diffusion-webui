@@ -1472,7 +1472,7 @@ def create_ui():
     for _interface, label, _ifid in interfaces:
         shared.tab_names.append(label)
 
-    with gr.Blocks(theme=shared.gradio_theme, analytics_enabled=False, title="Stable Diffusion") as demo:
+    with gr.Blocks(theme=shared.gradio_theme, analytics_enabled=False, title="Stable Diffusion(SD) Nyan Webui server") as demo:
         settings.add_quicksettings()
 
         parameters_copypaste.connect_paste_params_buttons()
